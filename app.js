@@ -16,7 +16,7 @@ const app = express();
 
 
 // MONGODB CONNECTION
-const connectionString = "mongodb+srv://admin:sc144229@learning-db-peb24.mongodb.net/blogDB?retryWrites=true&w=majority"
+
 
 mongoose.connect(connectionString, {
     useNewUrlParser: true,
