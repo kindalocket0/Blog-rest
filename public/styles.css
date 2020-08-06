@@ -17,3 +17,6 @@ body {
   margin-top: 3vh;
 }
 
+.comments .button {
+  margin-top: 25px !important;
+}

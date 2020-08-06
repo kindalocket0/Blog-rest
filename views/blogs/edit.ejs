@@ -1,16 +1,16 @@
-<%- include('partials/header') %> 
+<%- include('../partials/header') %> 
 
 <div class="ui text container main-content" id="content">
-  <h1 class="ui blue center aligned dividing header ">New Post</h1>
+  <h1 class="ui blue center aligned dividing header ">Edit Post</h1>
   
-  <form action="/blogs" method="POST" class="ui large form">
-    <div class="ui  segment">
+  <form action="/blogs/<%= blog._id %>?_method=PUT " method="POST" class="ui large form">
+    <div class="ui raised segment">
       <div class="field">
         <div class="ui labeled input">
           <div class="ui label">
             Title:
           </div>
-          <input type="text"  name="blog[title]">
+          <input type="text"  name="blog[title]" value="<%= blog.title %> ">
         </div>
         
       </div>
@@ -19,7 +19,7 @@
           <div class="ui label">
             Author:
           </div>
-          <input type="text"  name="blog[user]">
+          <input type="text"  name="blog[user]" value="<%= blog.user %> ">
         </div>
         
       </div>
@@ -28,7 +28,7 @@
           <div class="ui label">
             Image:
           </div>
-          <input type="text"  name="blog[image]">
+          <input type="text"  name="blog[image]" value="<%= blog.image %> ">
         </div>
         
       </div>
@@ -37,7 +37,7 @@
           <div class="ui label">
             Body:
           </div>
-          <textarea name="blog[body]" id="body" rows="10"></textarea>
+          <textarea name="blog[body]" id="body" rows="10"><%= blog.body %></textarea>
         </div>
         
       </div>
@@ -50,5 +50,5 @@
 </div>
 
 
-<%- include('partials/footer') %> 
+<%- include('../partials/footer') %> 
 

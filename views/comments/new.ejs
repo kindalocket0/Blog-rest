@@ -1,0 +1,41 @@
+
+
+<!-- ////////////////// -->
+<!-- NEW COMMENTS VIEW -->
+<%- include('../partials/header') %> 
+
+<div class="ui text container main-content" id="content">
+  <h1 class="ui blue center aligned dividing header ">Add Comment for "<%= blog.title %>" </h1>
+  
+  <form action="/blogs/<%= blog._id %> " method="POST" class="ui large form">
+    <div class="ui  segment">
+      <div class="field">
+        <div class="ui labeled input">
+          <div class="ui label">
+            Author:
+          </div>
+          <input type="text"  name="comment[author]">
+        </div>
+        
+      </div>
+      
+      <div class="field">
+        <div class="ui labeled input">
+          <div class="ui label">
+            Comment:
+          </div>
+          <textarea name="comment[text]" id="body" rows="10"></textarea>
+        </div>
+        
+      </div>
+
+      <button class="ui blue button" type="submit">Submit</button>
+
+    </div>
+  </form>
+
+</div>
+
+
+<%- include('../partials/footer') %> 
+
